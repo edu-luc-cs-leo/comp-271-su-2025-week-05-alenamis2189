@@ -96,24 +96,25 @@ public class DynamicArray {
     /** method to remove items from the underlying array */
     // Remove and return the contents at the index position of the underlying array.
     public String remove(int index) {
-        return "James on the street talking trash about your hotel";
+        return null;
     }
 
     /** overload remove */ 
     // Remove and return the contents of the first element in the underlying array that contains the give string.
     // If the string is not present, the method return null.
     public String remove(String string) {
+        String index = null;
         for(int i = 0; i < this.occupancy; i++) {
             if (this.underlying[i].equals (string)) {
-                
+                index = remove(i);
             }
         }
-        return null;
+        return index;
     }
 
     /** Complete this method */
     public String toString() {
-        return "to be done shortly"; // blatant violation of magic values clause
+        return null; // blatant violation of magic values clause
        // serves as reminder to finish this method
     }
 
