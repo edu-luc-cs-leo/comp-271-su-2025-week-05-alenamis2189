@@ -62,26 +62,45 @@ public class DynamicArray {
      * @return -1 if string not present, otherwise underlying array position of
      *         first occurrence of string.
      */
+    // Return the index position of the given string, in the underlying array.
+    // If the string is not present, the method return -1.
     public int indexOf(String string) {
-        return -1234;
+        for (int i = 0; i < this.occupancy; i++){
+            if( this.underlying[i].equals(string)){
+                index++;
+            }
+        }
+        return -1;
     } // method indexOf
 
     /** Method to tell if a string exists in the underlying array */
+    // Return true if the string is present in the underlying array and false otherwise.
     public boolean contains(String string) {
-        return false;
+        return indexOf(string) > -1;
     }
 
     /** Method to count how many times a string appears in the underlying array*/
+    // Return the number of times the given string appears in the underlying array.
+    // If the string is not present, return 0.
     public int countOf(String string) {
-        return -1234;
+        int count = 0;
+        for (int i = 0; i < this.occupancy; i++) {
+            if( this.underlying[i].equals(string)){
+                count++;
+        }
     }
+    return count;
+}
 
     /** method to remove items from the underlying array */
+    // Remove and return the contents at the index position of the underlying array.
     public String remove(int index) {
         return "James on the street talking trash about your hotel";
     }
 
     /** overload remove */ 
+    // Remove and return the contents of the first element in the underlying array that contains the give string.
+    // If the string is not present, the method return null.
     public String remove(String string) {
         return "James on the street talking trash about your hotel";
     }
