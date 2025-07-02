@@ -114,7 +114,7 @@ public class DynamicArray {
 
     /** Complete this method */
     public String toString() {
-        return null; // blatant violation of magic values clause
+        return null;
        // serves as reminder to finish this method
     }
 
