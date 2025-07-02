@@ -65,12 +65,13 @@ public class DynamicArray {
     // Return the index position of the given string, in the underlying array.
     // If the string is not present, the method return -1.
     public int indexOf(String string) {
+       int index = -1;
         for (int i = 0; i < this.occupancy; i++){
             if( this.underlying[i].equals(string)){
-                index++;
+                index = i;
             }
         }
-        return -1;
+        return index;
     } // method indexOf
 
     /** Method to tell if a string exists in the underlying array */
@@ -102,13 +103,18 @@ public class DynamicArray {
     // Remove and return the contents of the first element in the underlying array that contains the give string.
     // If the string is not present, the method return null.
     public String remove(String string) {
-        return "James on the street talking trash about your hotel";
+        for(int i = 0; i < this.occupancy; i++) {
+            if (this.underlying[i].equals (string)) {
+                
+            }
+        }
+        return null;
     }
 
     /** Complete this method */
     public String toString() {
         return "to be done shortly"; // blatant violation of magic values clause
-                                     // serves as reminder to finish this method
+       // serves as reminder to finish this method
     }
 
 } // class DynamicArray
